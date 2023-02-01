@@ -24,20 +24,30 @@ limitations under the License.
 
 > Create a [readable stream][readable-stream] from an [iterator][mdn-iterator-protocol].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/streams-node-from-iterator
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iteratorStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@deno/mod.js';
+var iteratorStream = require( '@stdlib/streams-node-from-iterator' );
 ```
 
 <a name="iterator-stream"></a>
@@ -47,8 +57,8 @@ import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strea
 Returns a [readable stream][readable-stream] from an [iterator][mdn-iterator-protocol].
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-iter-randu' );
 
 var iStream;
 var stream;
@@ -77,7 +87,7 @@ The function accepts the following `options`:
 To set [stream][stream] `options`,
 
 ```javascript
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var randu = require( '@stdlib/random-iter-randu' );
 
 var opts = {
     'objectMode': true,
@@ -91,8 +101,8 @@ var stream = iteratorStream( randu(), opts );
 By default, when not operating in [objectMode][object-mode], a returned [stream][stream] delineates iterated values using a newline character. To specify an alternative separator, set the `sep` option.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-iter-randu' );
 
 function log( chunk ) {
     console.log( chunk.toString() );
@@ -114,8 +124,8 @@ stream.pipe( iStream );
 By default, when not operating in [objectMode][object-mode], a returned [stream][stream] serializes iterated values as JSON strings. To specify custom serialization behavior (either to a `string` or `Buffer`), set the `serialize` option.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-iter-randu' );
 
 function serialize( v ) {
     return 'r::' + v.toString();
@@ -145,7 +155,7 @@ stream.pipe( iStream );
 Returns a `function` for creating [readable streams][readable-stream] from [iterators][mdn-iterator-protocol].
 
 ```javascript
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var randu = require( '@stdlib/random-iter-randu' );
 
 var opts = {
     'objectMode': true,
@@ -169,8 +179,8 @@ The method accepts the same `options` as [`iteratorStream()`](#iterator-stream).
 This method is a convenience function to create [streams][stream] which **always** operate in [objectMode][object-mode].
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-iter-randu' );
 
 function log( v ) {
     console.log( v );
@@ -217,9 +227,9 @@ This method accepts the same `options` as [`iteratorStream()`](#iterator-stream)
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
-import iteratorStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-iter-randu' );
+var iteratorStream = require( '@stdlib/streams-node-from-iterator' );
 
 function log( v ) {
     console.log( v.toString() );
@@ -274,7 +284,7 @@ stream.pipe( iStream );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -344,7 +354,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/streams/node/from-array]: https://github.com/stdlib-js/streams-node-from-array/tree/deno
+[@stdlib/streams/node/from-array]: https://github.com/stdlib-js/streams-node-from-array
 
 <!-- </related-links> -->
 
