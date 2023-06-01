@@ -19,7 +19,7 @@
 // TypeScript Version: 2.0
 
 /// <reference types="node"/>
-/// <reference types="@stdlib/types"/>
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
 import { Readable } from 'stream';
 import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
