@@ -59,9 +59,9 @@
     "readable-stream": "^2.1.4"
   },
   "devDependencies": {
-    "@stdlib/array-to-iterator": "^0.0.6",
+    "@stdlib/array-to-iterator": "^0.1.0",
     "@stdlib/bench": "^0.1.0",
-    "@stdlib/random-iter-randu": "^0.0.6",
+    "@stdlib/random-iter-randu": "^0.1.0",
     "@stdlib/streams-node-inspect-sink": "^0.1.0",
     "@stdlib/utils-parse-json": "^0.1.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
