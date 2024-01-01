@@ -22,7 +22,7 @@
 
 var Readable = require( 'readable-stream' ).Readable;
 var randu = require( '@stdlib/random-iter-randu' );
-var bench = require( '@stdlib/bench' );
+var bench = require( '@stdlib/bench-harness' );
 var pkg = require( './../package.json' ).name;
 var iteratorStream = require( './../lib' );
 
