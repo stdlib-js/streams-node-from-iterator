@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iteratorStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@esm/index.mjs';
+import iteratorStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@esm/index.mjs';
+import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@v0.2.1-esm/index.mjs';
 ```
 
 <a name="iterator-stream"></a>
@@ -235,7 +235,7 @@ This method accepts the same `options` as [`iteratorStream()`](#iterator-stream)
 
 import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@esm/index.mjs';
-import iteratorStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@esm/index.mjs';
+import iteratorStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@v0.2.1-esm/index.mjs';
 
 function log( v ) {
     console.log( v.toString() );
