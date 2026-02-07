@@ -44,7 +44,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-iteratorStream = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@umd/browser.js' )
+iteratorStream = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@v0.2.3-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -56,7 +56,7 @@ var iteratorStream = require( 'path/to/vendor/umd/streams-node-from-iterator/ind
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@v0.2.3-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -251,7 +251,7 @@ This method accepts the same `options` as [`iteratorStream()`](#iterator-stream)
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-iterator@v0.2.3-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
